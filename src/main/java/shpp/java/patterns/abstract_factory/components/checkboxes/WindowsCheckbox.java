@@ -1,4 +1,4 @@
-package shpp.java.patterns.abstract_factory.checkboxes;
+package shpp.java.patterns.abstract_factory.components.checkboxes;
 
 public class WindowsCheckbox implements Checkbox {
 

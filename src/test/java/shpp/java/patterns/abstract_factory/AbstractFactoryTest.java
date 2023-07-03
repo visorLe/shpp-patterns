@@ -2,7 +2,6 @@ package shpp.java.patterns.abstract_factory;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import shpp.java.patterns.abstract_factory.application.Application;
@@ -11,10 +10,6 @@ import shpp.java.patterns.abstract_factory.factories.LinuxFactory;
 import shpp.java.patterns.abstract_factory.factories.WindowsFactory;
 
 public class AbstractFactoryTest {
-    @BeforeAll
-    static void setUp() {
-        System.setProperty("os.name", "lin");
-    }
 
     @Test
     void testAbstractFactory() {
@@ -25,13 +20,13 @@ public class AbstractFactoryTest {
     private static Application configureApplication() {
         Application app;
         GUIFactory factory;
-        String osName = System.getProperty("os.name").toLowerCase();
+        String osName = System.getProperty("os.name");
         switch (osName) {
-            case "lin":
+            case "Linux":
                 factory = new LinuxFactory();
                 app = new Application(factory);
                 break;
-            case "win":
+            case "Windows":
                 factory = new WindowsFactory();
                 app = new Application(factory);
                 break;

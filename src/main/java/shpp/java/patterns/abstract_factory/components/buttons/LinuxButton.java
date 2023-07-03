@@ -1,4 +1,4 @@
-package shpp.java.patterns.abstract_factory.buttons;
+package shpp.java.patterns.abstract_factory.components.buttons;
 
 public class LinuxButton implements Button {
 
