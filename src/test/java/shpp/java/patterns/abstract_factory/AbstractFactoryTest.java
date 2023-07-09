@@ -12,7 +12,7 @@ import shpp.java.patterns.abstract_factory.factories.WindowsFactory;
 public class AbstractFactoryTest {
 
     @Test
-    void testAbstractFactory() {
+    void abstractFactoryTest() {
         Application app = AbstractFactoryTest.configureApplication();
         assertTrue(app.render());
     }

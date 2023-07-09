@@ -12,7 +12,7 @@ import shpp.java.patterns.decorator.decorators.MountainBikeDecorator;
 public class DecoratorTest {
 
     @Test
-    void testDecorator() {
+    void decoratorTest() {
         Bicycle mountainBike = new MountainBikeDecorator(new SimpleBicycle());
         assertTrue(mountainBike.assemble());
 
